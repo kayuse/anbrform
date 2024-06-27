@@ -44,12 +44,12 @@ function Register() {
       formData.mobile == '' ||
       formData.address == '' ||
       formData.occupation == '' ||
-   //   formData.marital_status == '' ||
+      //   formData.marital_status == '' ||
       formData.country == '' ||
       formData.has_attended == '' ||
       formData.your_description == '' ||
       formData.needs_attention == '' ||
-   //   formData.nursing_mum == '' ||
+      //   formData.nursing_mum == '' ||
       formData.expectations == '' ||
       formData.invited_by == ''
     ) {
@@ -90,55 +90,52 @@ function Register() {
               Complete this form to Register for ANBR 2024
             </p>
           </div>
-
-          <div class="formbold-input-flex">
-            <div>
-              <label for="firstname" class="formbold-form-label">
-                First name *
-              </label>
-              <input
-                type="text"
-                name="firstname"
-                value={formData.firstname}
-                onChange={handleChange}
-                class="formbold-form-input"
-              />
-            </div>
-            <div>
-              <label for="lastname" class="formbold-form-label"> Last name *</label>
-              <input
-                type="text"
-                name='lastname'
-                value={formData.lastname}
-                onChange={handleChange}
-                id="lastname"
-                class="formbold-form-input"
-              />
-            </div>
+          <div>
+            <label for="firstname" class="formbold-form-label">
+              First name *
+            </label>
+            <input
+              type="text"
+              name="firstname"
+              value={formData.firstname}
+              onChange={handleChange}
+              class="formbold-form-input"
+            />
+          </div> 
+          <br />
+          <div>
+            <label for="lastname" class="formbold-form-label"> Last name *</label>
+            <input
+              type="text"
+              name='lastname'
+              value={formData.lastname}
+              onChange={handleChange}
+              id="lastname"
+              class="formbold-form-input"
+            />
           </div>
-
-          <div class="formbold-input-flex">
-            <div>
-              <label for="email" class="formbold-form-label"> Email *</label>
-              <input
-                type="email"
-                name='email'
-                value={formData.email}
-                onChange={handleChange}
-                class="formbold-form-input"
-              />
-            </div>
-            <div>
-              <label for="phone" class="formbold-form-label"> Phone Number(Whatsapp preferably)   *</label>
-              <input
-                type="text"
-                name='mobile'
-                value={formData.mobile}
-                onChange={handleChange}
-                id="phone"
-                class="formbold-form-input"
-              />
-            </div>
+          <br />
+          <div>
+            <label for="email" class="formbold-form-label"> Email *</label>
+            <input
+              type="email"
+              name='email'
+              value={formData.email}
+              onChange={handleChange}
+              class="formbold-form-input"
+            />
+          </div>
+          <br/>
+          <div >
+            <label for="phone" class="formbold-form-label"> Phone Number(Whatsapp preferably)   *</label>
+            <input
+              type="text"
+              name='mobile'
+              value={formData.mobile}
+              onChange={handleChange}
+              id="phone"
+              class="formbold-form-input"
+            />
           </div>
 
           <div class="formbold-mb-3">
