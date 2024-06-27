@@ -59,7 +59,7 @@ function Register() {
     setRegistrationText("Processing..., Please wait")
     // Process form data here
     try {
-      const response = await axios.post('http://localhost:3333/api/register', formData);
+      const response = await axios.post('https://anbr.ilanaa.org/api/register', formData);
       setRegistrationText("Register Now")
       const data = response.data
       console.log(data)
