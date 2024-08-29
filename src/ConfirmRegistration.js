@@ -259,6 +259,36 @@ function ConfirmRegistration() {
                   <span class="formbold-radio-checkmark"></span>
                 </label>
               </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="ministryWorkshopId"
+                    value='YOUNGSTARS  CLASS'
+                    checked={formData.ministryWorkshopId == 'YOUNGSTARS  CLASS'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  YOUNGSTARS  CLASS
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="ministryWorkshopId"
+                    value='Ministry class'
+                    checked={formData.ministryWorkshopId == 'Ministry class'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  Ministry class
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
             </div>
           </div>
           <br />
