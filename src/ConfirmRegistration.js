@@ -180,9 +180,9 @@ function ConfirmRegistration() {
                   <input
                     class="formbold-input-radio"
                     type="radio"
-                    name="ministryWorkshopId"
+                    name="bibleStudyId"
                     value='YOUNGSTARS  CLASS'
-                    checked={formData.ministryWorkshopId == 'YOUNGSTARS  CLASS'}
+                    checked={formData.bibleStudyId == 'YOUNGSTARS  CLASS'}
                     onChange={handleChange}
                     id="qusOne"
                   />
@@ -195,9 +195,9 @@ function ConfirmRegistration() {
                   <input
                     class="formbold-input-radio"
                     type="radio"
-                    name="ministryWorkshopId"
+                    name="bibleStudyId"
                     value='Ministry class'
-                    checked={formData.ministryWorkshopId == 'Ministry class'}
+                    checked={formData.bibleStudyId == 'Ministry class'}
                     onChange={handleChange}
                     id="qusOne"
                   />
