@@ -274,8 +274,8 @@ function ConfirmRegistration() {
                     class="formbold-input-radio"
                     type="radio"
                     name="hasAccomodation"
-                    value='true'
-                    checked={formData.hasAccomodation == 'true'}
+                    value='false'
+                    checked={formData.hasAccomodation == 'false'}
                     onChange={handleChange}
                     id="qusOne"
                   />
@@ -289,8 +289,8 @@ function ConfirmRegistration() {
                     class="formbold-input-radio"
                     type="radio"
                     name="hasAccomodation"
-                    value='false'
-                    checked={formData.hasAccomodation == 'false'}
+                    value='true'
+                    checked={formData.hasAccomodation == 'true'}
                     onChange={handleChange}
                     id="qusOne"
                   />
