@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Register />} />
-          <Route path="/confirm-registration/:id" element={<ConfirmRegistration />} />
+          <Route path="/confirm-registration/" element={<ConfirmRegistration />} />
           <Route path="/success" element={<SuccessPage />} />
           <Route path="/success-confirmation/" element={<SuccessConfirmationPage />} />
         </Routes>

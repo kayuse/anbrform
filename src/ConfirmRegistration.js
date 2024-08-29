@@ -32,17 +32,17 @@ function ConfirmRegistration() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setRegistrationText("Processing..., Please wait")
-    // navigate('/success')
-    // Process form data here
+
     try {
-      if(formData.bibleStudyId == '' || formData.ministryWorkshopId == ''){
-        alert('Please select Workshop and Bible Study Group')
+      if(formData.regId == '' || formData.bibleStudyId == '' || formData.ministryWorkshopId == ''){
+        alert('Please Type RegistrationID, Select Workshop and Bible Study Group')
+        setRegistrationText("Confirm Registration")
+        return;
       }
       const requestData = formData
-      requestData['regId'] = Registrant.registrationId
-      console.log(requestData)
       const response = await axios.post('https://anbr.ilanaa.org/api/registrant/confirm', requestData);
       setRegistrationText("Confirm Registration")
+      const globalState = JSON.parse(localStorage.getItem('globalState'));
       const data = response.data
       localStorage.setItem('registrant', JSON.stringify(data));
       if (response.status == 200) {
@@ -79,7 +79,7 @@ function ConfirmRegistration() {
         //   setLoading(false); // Stop loading once the request is complete
       }
     };
-    fetchData();
+  //  fetchData();
   }, []);
   return (
     <div class="formbold-main-wrapper">
@@ -90,11 +90,25 @@ function ConfirmRegistration() {
         <form method="POST" onSubmit={handleSubmit}>
           <div class="formbold-form-title">
             <br />
-            <h2 class="">Hi {Registrant['firstname']}, REGID {Registrant['registrationId']}</h2>
+            <h2 class="">Hi, Please Confirm your Registration</h2>
             <p>
               Complete this form to Confirm Your Registration
             </p>
           </div>
+          <br />
+          <div>
+            <label for="thregif" class="formbold-form-label">
+              THREG ID *
+            </label>
+            <input
+              type="text"
+              name="regId"
+              value={formData.regId}
+              onChange={handleChange}
+              class="formbold-form-input"
+            />
+          </div> 
+          <br/>
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Please Select your Bible Study Workshop
@@ -163,7 +177,7 @@ function ConfirmRegistration() {
               </div>
             </div>
           </div>
-          <br />
+          <br/>
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Please select your Ministry Workshop
