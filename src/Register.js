@@ -23,6 +23,7 @@ function Register() {
     has_attended: '',
     your_description: '',
     needs_attention: '',
+    paid_accomodation: '',
     nursing_mum: '',
     expectations: '',
     invited_by: ''
@@ -51,6 +52,7 @@ function Register() {
       formData.needs_attention == '' ||
       //   formData.nursing_mum == '' ||
       formData.expectations == '' ||
+      formData.paid_accomodation == '' ||
       formData.invited_by == ''
     ) {
       alert('Please complete all compulsory fields and Try again, Thank you')
@@ -87,7 +89,7 @@ function Register() {
           <div class="formbold-form-title">
             <h2 class="">Register now</h2>
             <p>
-              Complete this form to Register for ANBR 2024
+              Complete this form to Register for ANBR 2025
             </p>
           </div>
           <div>
@@ -305,7 +307,7 @@ function Register() {
           </div>
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
-              Habe you attended a previous edition of ANBR *
+              Have you attended a previous edition of ANBR *
             </label>
 
             <div class="formbold-radio-flex">
@@ -332,6 +334,46 @@ function Register() {
                     name="has_attended"
                     value='No'
                     checked={formData.has_attended == 'No'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  No
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+          <br />
+          <div class="formbold-mb-5">
+            <label for="qusOne" class="formbold-form-label">
+             Do you Want Paid Accomodation
+            </label>
+
+            <div class="formbold-radio-flex">
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="paid_accomodation"
+                    value='Yes'
+                    checked={formData.paid_accomodation == 'Yes'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  Yes
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="paid_accomodation"
+                    value='No'
+                    checked={formData.paid_accomodation == 'No'}
                     onChange={handleChange}
                     id="qusOne"
                   />
