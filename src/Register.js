@@ -31,7 +31,6 @@ function Register() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value)
     setFormData({
       ...formData,
       [name]: value
@@ -103,7 +102,7 @@ function Register() {
               onChange={handleChange}
               class="formbold-form-input"
             />
-          </div> 
+          </div>
           <br />
           <div>
             <label for="lastname" class="formbold-form-label"> Last name *</label>
@@ -127,7 +126,7 @@ function Register() {
               class="formbold-form-input"
             />
           </div>
-          <br/>
+          <br />
           <div >
             <label for="phone" class="formbold-form-label"> Phone Number(Whatsapp preferably)   *</label>
             <input
@@ -347,46 +346,6 @@ function Register() {
           <br />
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
-             Do you Want Paid Accomodation
-            </label>
-
-            <div class="formbold-radio-flex">
-              <div class="formbold-radio-group">
-                <label class="formbold-radio-label">
-                  <input
-                    class="formbold-input-radio"
-                    type="radio"
-                    name="paid_accomodation"
-                    value='Yes'
-                    checked={formData.paid_accomodation == 'Yes'}
-                    onChange={handleChange}
-                    id="qusOne"
-                  />
-                  Yes
-                  <span class="formbold-radio-checkmark"></span>
-                </label>
-              </div>
-              <div class="formbold-radio-group">
-                <label class="formbold-radio-label">
-                  <input
-                    class="formbold-input-radio"
-                    type="radio"
-                    name="paid_accomodation"
-                    value='No'
-                    checked={formData.paid_accomodation == 'No'}
-                    onChange={handleChange}
-                    id="qusOne"
-                  />
-                  No
-                  <span class="formbold-radio-checkmark"></span>
-                </label>
-              </div>
-
-            </div>
-          </div>
-          <br />
-          <div class="formbold-mb-5">
-            <label for="qusOne" class="formbold-form-label">
               How did you hear about this retreat? *
             </label>
 
@@ -527,30 +486,113 @@ function Register() {
             <label for="address" class="formbold-form-label">
               Is there a need for a special of comfort for you at the retreat (e.g allergies, health issues,  Pregnant/nursing mothers, disability? *
             </label>
-            <input
-              type="text"
-              name="needs_attention"
-              value={formData.needs_attention}
-              onChange={handleChange}
-              id="needs_attention"
-              class="formbold-form-input"
-            />
+            <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="needs_attention"
+                    value='Yes'
+                    checked={formData.needs_attention == 'Yes'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                 Yes
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="needs_attention"
+                    value='No'
+                    checked={formData.needs_attention == 'No'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  No
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
           </div>
 
           <br />
           <div class="formbold-mb-3">
             <label for="address" class="formbold-form-label">
               Are you a toddler mom? If yes,  how many toddler are you coming with?
-
             </label>
-            <input
-              type="text"
-              name="nursing_mum"
-              value={formData.nursing_mum}
-              onChange={handleChange}
-              id="nursing_mum"
-              class="formbold-form-input"
-            />
+            <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="nursing_mum"
+                    value='Yes'
+                    checked={formData.nursing_mum == 'Yes'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                 Yes
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="nursing_mum"
+                    value='No'
+                    checked={formData.nursing_mum == 'No'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  No
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+          </div>
+          <br />
+          <div class="formbold-mb-5">
+            <label for="qusOne" class="formbold-form-label">
+              Do you Want Paid Accomodation
+            </label>
+
+            <div class="formbold-radio-flex">
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="paid_accomodation"
+                    value='Yes'
+                    checked={formData.paid_accomodation == 'Yes'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  Yes
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="paid_accomodation"
+                    value='No'
+                    checked={formData.paid_accomodation == 'No'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  No
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+
+            </div>
           </div>
           <br />
           <div class="formbold-mb-3">
