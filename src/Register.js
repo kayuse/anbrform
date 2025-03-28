@@ -60,12 +60,11 @@ function Register() {
     setRegistrationText("Processing..., Please wait")
     // Process form data here
     try {
-      const response = await axios.post('http://localhost:8000/api/anbr/register', formData);
+      const response = await axios.post('https://emc.ecwa.app/api/anbr/register', formData);
       setRegistrationText("Register Now")
       const data = response.data
-      console.log(data)
-      if (data.status == 200) {
-        navigate('/success')
+      if (response.status == 200) {
+        navigate('/success', { state: data })
         return;
       } else {
         alert(data.message)
@@ -127,8 +126,8 @@ function Register() {
             />
           </div>
           <br />
-          <hr/>
-          <br/>
+          <hr />
+          <br />
           <div >
             <label for="phone" class="formbold-form-label"> Phone Number(Whatsapp preferably)   *</label>
             <input
@@ -140,9 +139,9 @@ function Register() {
               class="formbold-form-input"
             />
           </div>
-          <br/>
-          <hr/>
-          <br/>
+          <br />
+          <hr />
+          <br />
           <div class="formbold-mb-3">
             <label for="address" class="formbold-form-label">
               Residential address (with street name, landmark and nearest bus stop) *
@@ -156,9 +155,9 @@ function Register() {
               class="formbold-form-input"
             />
           </div>
-          <br/>
-          <hr/>
-          <br/>
+          <br />
+          <hr />
+          <br />
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Occupation *
@@ -257,9 +256,9 @@ function Register() {
               </div>
             </div>
           </div>
-          <br/>
-          <hr/>
-          <br/>
+          <br />
+          <hr />
+          <br />
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Marital Status
@@ -299,9 +298,9 @@ function Register() {
 
             </div>
           </div>
-          <br/>
-          <hr/>
-          <br/>
+          <br />
+          <hr />
+          <br />
           <div class="formbold-mb-3">
             <label for="address" class="formbold-form-label">
               State and Country of Residence *
@@ -315,9 +314,9 @@ function Register() {
               class="formbold-form-input"
             />
           </div>
-          <br/>
-          <hr/>
-          <br/>
+          <br />
+          <hr />
+          <br />
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Have you attended a previous edition of ANBR *
@@ -357,10 +356,10 @@ function Register() {
 
             </div>
           </div>
-          <br/>
-          <hr/>
-          <br/>
-                    <div class="formbold-mb-5">
+          <br />
+          <hr />
+          <br />
+          <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               How did you hear about this retreat? *
             </label>
@@ -428,9 +427,9 @@ function Register() {
               </div>
             </div>
           </div>
-          <br/>
-          <hr/>
-          <br/>
+          <br />
+          <hr />
+          <br />
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Which of these best describe you? *
@@ -499,85 +498,85 @@ function Register() {
               </div>
             </div>
           </div>
-          <br/>
-          <hr/>
-          <br/>
+          <br />
+          <hr />
+          <br />
           <div class="formbold-mb-3">
             <label for="address" class="formbold-form-label">
               Is there a need for a special of comfort for you at the retreat (e.g allergies, health issues,  Pregnant/nursing mothers, disability? *
             </label>
             <div class="formbold-radio-group">
-                <label class="formbold-radio-label">
-                  <input
-                    class="formbold-input-radio"
-                    type="radio"
-                    name="needs_attention"
-                    value='Yes'
-                    checked={formData.needs_attention == 'Yes'}
-                    onChange={handleChange}
-                    id="qusOne"
-                  />
-                 Yes
-                  <span class="formbold-radio-checkmark"></span>
-                </label>
-              </div>
-              <div class="formbold-radio-group">
-                <label class="formbold-radio-label">
-                  <input
-                    class="formbold-input-radio"
-                    type="radio"
-                    name="needs_attention"
-                    value='No'
-                    checked={formData.needs_attention == 'No'}
-                    onChange={handleChange}
-                    id="qusOne"
-                  />
-                  No
-                  <span class="formbold-radio-checkmark"></span>
-                </label>
-              </div>
+              <label class="formbold-radio-label">
+                <input
+                  class="formbold-input-radio"
+                  type="radio"
+                  name="needs_attention"
+                  value='Yes'
+                  checked={formData.needs_attention == 'Yes'}
+                  onChange={handleChange}
+                  id="qusOne"
+                />
+                Yes
+                <span class="formbold-radio-checkmark"></span>
+              </label>
+            </div>
+            <div class="formbold-radio-group">
+              <label class="formbold-radio-label">
+                <input
+                  class="formbold-input-radio"
+                  type="radio"
+                  name="needs_attention"
+                  value='No'
+                  checked={formData.needs_attention == 'No'}
+                  onChange={handleChange}
+                  id="qusOne"
+                />
+                No
+                <span class="formbold-radio-checkmark"></span>
+              </label>
+            </div>
           </div>
-          <br/>
-          <hr/>
-          <br/>
+          <br />
+          <hr />
+          <br />
           <div class="formbold-mb-3">
             <label for="address" class="formbold-form-label">
               Are you a toddler mom? If yes,  how many toddler are you coming with?
             </label>
             <div class="formbold-radio-group">
-                <label class="formbold-radio-label">
-                  <input
-                    class="formbold-input-radio"
-                    type="radio"
-                    name="nursing_mum"
-                    value='Yes'
-                    checked={formData.nursing_mum == 'Yes'}
-                    onChange={handleChange}
-                    id="qusOne"
-                  />
-                 Yes
-                  <span class="formbold-radio-checkmark"></span>
-                </label>
-              </div>
-              <div class="formbold-radio-group">
-                <label class="formbold-radio-label">
-                  <input
-                    class="formbold-input-radio"
-                    type="radio"
-                    name="nursing_mum"
-                    value='No'
-                    checked={formData.nursing_mum == 'No'}
-                    onChange={handleChange}
-                    id="qusOne"
-                  />
-                  No
-                  <span class="formbold-radio-checkmark"></span>
-                </label>
-              </div>
+              <label class="formbold-radio-label">
+                <input
+                  class="formbold-input-radio"
+                  type="radio"
+                  name="nursing_mum"
+                  value='Yes'
+                  checked={formData.nursing_mum == 'Yes'}
+                  onChange={handleChange}
+                  id="qusOne"
+                />
+                Yes
+                <span class="formbold-radio-checkmark"></span>
+              </label>
+            </div>
+            <div class="formbold-radio-group">
+              <label class="formbold-radio-label">
+                <input
+                  class="formbold-input-radio"
+                  type="radio"
+                  name="nursing_mum"
+                  value='No'
+                  checked={formData.nursing_mum == 'No'}
+                  onChange={handleChange}
+                  id="qusOne"
+                />
+                No
+                <span class="formbold-radio-checkmark"></span>
+              </label>
+            </div>
           </div>
-          <br/>
-          <hr/>
-          <br/>
+          <br />
+          <hr />
+          <br />
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Do you Want Paid Accomodation
