@@ -44,12 +44,12 @@ function Register() {
       formData.mobile == '' ||
       formData.address == '' ||
       formData.occupation == '' ||
-      //   formData.marital_status == '' ||
+      formData.marital_status == '' ||
       formData.country == '' ||
       formData.has_attended == '' ||
       formData.your_description == '' ||
       formData.needs_attention == '' ||
-      //   formData.nursing_mum == '' ||
+      formData.nursing_mum == '' ||
       formData.expectations == '' ||
       formData.paid_accomodation == '' ||
       formData.invited_by == ''
@@ -60,7 +60,7 @@ function Register() {
     setRegistrationText("Processing..., Please wait")
     // Process form data here
     try {
-      const response = await axios.post('https://anbr.ilanaa.org/api/register', formData);
+      const response = await axios.post('http://localhost:8000/api/anbr/register', formData);
       setRegistrationText("Register Now")
       const data = response.data
       console.log(data)
