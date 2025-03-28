@@ -18,7 +18,7 @@ const SuccessPage = () => {
         <p>Please note your email might delay but it's going to arrive. </p>
         <p> Registration ID : {registration_id}</p>
         <br />
-        <strong> Please if you have any challenges, go to the registration desk</strong>
+        <strong> Please if you have any challenges, please call +2348027320998</strong>
         <br />
         <br />
         <button
