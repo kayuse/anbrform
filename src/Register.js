@@ -127,6 +127,8 @@ function Register() {
             />
           </div>
           <br />
+          <hr/>
+          <br/>
           <div >
             <label for="phone" class="formbold-form-label"> Phone Number(Whatsapp preferably)   *</label>
             <input
@@ -138,7 +140,9 @@ function Register() {
               class="formbold-form-input"
             />
           </div>
-
+          <br/>
+          <hr/>
+          <br/>
           <div class="formbold-mb-3">
             <label for="address" class="formbold-form-label">
               Residential address (with street name, landmark and nearest bus stop) *
@@ -152,6 +156,9 @@ function Register() {
               class="formbold-form-input"
             />
           </div>
+          <br/>
+          <hr/>
+          <br/>
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Occupation *
@@ -214,7 +221,7 @@ function Register() {
                     onChange={handleChange}
                     id="qusOne"
                   />
-                  Self employed/Career Professional
+                  Self Employed/Career Professional
                   <span class="formbold-radio-checkmark"></span>
                 </label>
               </div>
@@ -250,7 +257,9 @@ function Register() {
               </div>
             </div>
           </div>
-          <br />
+          <br/>
+          <hr/>
+          <br/>
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Marital Status
@@ -290,7 +299,9 @@ function Register() {
 
             </div>
           </div>
-          <br />
+          <br/>
+          <hr/>
+          <br/>
           <div class="formbold-mb-3">
             <label for="address" class="formbold-form-label">
               State and Country of Residence *
@@ -304,6 +315,9 @@ function Register() {
               class="formbold-form-input"
             />
           </div>
+          <br/>
+          <hr/>
+          <br/>
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Have you attended a previous edition of ANBR *
@@ -343,8 +357,10 @@ function Register() {
 
             </div>
           </div>
-          <br />
-          <div class="formbold-mb-5">
+          <br/>
+          <hr/>
+          <br/>
+                    <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               How did you hear about this retreat? *
             </label>
@@ -412,7 +428,9 @@ function Register() {
               </div>
             </div>
           </div>
-          <br />
+          <br/>
+          <hr/>
+          <br/>
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Which of these best describe you? *
@@ -460,7 +478,7 @@ function Register() {
                     onChange={handleChange}
                     id="qusOne"
                   />
-                  Threshing House Inducted Member
+                  Inducted Member
                   <span class="formbold-radio-checkmark"></span>
                 </label>
               </div>
@@ -481,7 +499,9 @@ function Register() {
               </div>
             </div>
           </div>
-          <br />
+          <br/>
+          <hr/>
+          <br/>
           <div class="formbold-mb-3">
             <label for="address" class="formbold-form-label">
               Is there a need for a special of comfort for you at the retreat (e.g allergies, health issues,  Pregnant/nursing mothers, disability? *
@@ -517,8 +537,9 @@ function Register() {
                 </label>
               </div>
           </div>
-
-          <br />
+          <br/>
+          <hr/>
+          <br/>
           <div class="formbold-mb-3">
             <label for="address" class="formbold-form-label">
               Are you a toddler mom? If yes,  how many toddler are you coming with?
@@ -554,7 +575,9 @@ function Register() {
                 </label>
               </div>
           </div>
-          <br />
+          <br/>
+          <hr/>
+          <br/>
           <div class="formbold-mb-5">
             <label for="qusOne" class="formbold-form-label">
               Do you Want Paid Accomodation
