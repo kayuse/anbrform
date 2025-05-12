@@ -63,7 +63,7 @@ function Register() {
     setRegistrationText("Processing..., Please wait")
     // Process form data here
     try {
-      const response = await axios.post('https://emc.ecwa.app/api/anbr/register', formData);
+      const response = await axios.post('https://hymnadmin-0b62502f66b0.herokuapp.com/api/anbr/register', formData);
       setRegistrationText("Register Now")
       const data = response.data
       if (response.status == 200) {
