@@ -31,6 +31,9 @@ function Register() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name == 'nursing_mum' && value == 'Yes') {
+      alert('Dear ' + formData.firstname + ' We recommend you to book a Paid Accomodation')
+    }
     setFormData({
       ...formData,
       [name]: value
