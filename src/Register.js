@@ -24,6 +24,8 @@ function Register() {
     your_description: '',
     needs_attention: '',
     paid_accomodation: '',
+    bible_workshop: '',
+    ministry_workshop: '',
     nursing_mum: '',
     expectations: '',
     invited_by: ''
@@ -54,6 +56,8 @@ function Register() {
       formData.needs_attention == '' ||
       formData.nursing_mum == '' ||
       formData.expectations == '' ||
+      formData.bible_workshop == '' ||
+      formData.ministry_workshop == '' ||
       formData.paid_accomodation == '' ||
       formData.invited_by == ''
     ) {
@@ -633,6 +637,190 @@ function Register() {
               id="expectations"
               class="formbold-form-input"
             />
+          </div>
+          <hr />
+          <br />
+          <div class="formbold-mb-5">
+            <label for="qusOne" class="formbold-form-label">
+              Please select the Bible Workshops you would like to attend *
+            </label>
+
+            <div class="formbold-radio-flex">
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="bible_workshop"
+                    value='Ministry Class'
+                    checked={formData.bible_workshop == 'Ministry Class'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                 <strong> Ministry Class:</strong>&nbsp;<small>You are currently a pastor, fellowship president or vice president,
+                  ministry founders, top leaders in ministries,
+                  visioneers and those perceive God's call into full time ministry.</small>
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="bible_workshop"
+                    value='Believers On A Mission Class'
+                    checked={formData.bible_workshop == 'Believers On A Mission Class'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  <strong> Believers On A Mission Class:</strong>&nbsp;<small> 
+                  Perceiving God's call into the ministry or wants to clarify God's call for their lives or you just
+                   want to grow in your walk with God</small>
+
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="bible_workshop"
+                    value='New Believers Maturity Class'
+                    checked={formData.bible_workshop == 'New Believers Maturity Class'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  <strong>New Believers Maturity Class:</strong>&nbsp;<small>You just got born again in the last one to 
+                    two years and you haven't consciously undergone any serious discipleship class to 
+                    ground you in the new life you received and you need</small>
+
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="bible_workshop"
+                    value='Holy Ghost Baptism Class'
+                    checked={formData.bible_workshop == 'Holy Ghost Baptism Class'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  <strong>Holy Ghost Baptism Class:</strong>&nbsp;<small>
+                    You are a believer but you are yet to be filled with the Holy 
+                    Spirit with evidence of speaking in tongues.</small>
+
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="bible_workshop"
+                    value='Prayer, Healing and Deliverance Class'
+                    checked={formData.bible_workshop == 'Prayer, Healing and Deliverance Class'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  <strong>Prayer, Healing and Deliverance Class:</strong>&nbsp;<small>
+                     You need a special prayer over a matter, or you need prayer for healing
+                      or there is a manifestation in your life that looks like demonic activities.</small>
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <hr />
+          <br />
+          <div class="formbold-mb-5">
+            <label for="qusOne" class="formbold-form-label">
+              Please select the Ministry Workshops you would like to attend *
+            </label>
+
+            <div class="formbold-radio-flex">
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="ministry_workshop"
+                    value='Children and Teens Ministry'
+                    checked={formData.ministry_workshop == 'Children and Teens Ministry'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  <strong>Children and Teens Ministry:</strong>&nbsp;<small>You are called or passionate about reaching young people (children and teens)</small>
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="ministry_workshop"
+                    value='Relationship and Family Life Ministry'
+                    checked={formData.ministry_workshop == 'Relationship and Family Life Ministry'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  <strong>Relationship and Family Life Ministry</strong>&nbsp;<small>You are called or passionate about helping people get their marital life right and building solid marriages</small>
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="ministry_workshop"
+                    value='Evangelism and Missions Ministry'
+                    checked={formData.ministry_workshop == 'Evangelism and Missions Ministry'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  <strong>Evangelism and Missions Ministry:</strong>&nbsp;<small>You are called or passionate about reaching the lost for Christ. You are passionate about evangelism and missions</small>
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="ministry_workshop"
+                    value='Spiritual Formation and Maturity Ministry'
+                    checked={formData.ministry_workshop == 'Spiritual Formation and Maturity Ministry'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  <strong>Spiritual Formation and Maturity Ministry:</strong>&nbsp;<small>You are called or passionate about helping people to grow in their walk with Christ.</small>
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="ministry_workshop"
+                    value='Believers in the Workplace Ministry'
+                    checked={formData.ministry_workshop == 'Believers in the Workplace Ministry'}
+                    onChange={handleChange}
+                    id="qusOne"
+                  />
+                  <strong>Believers in the Workplace Ministry:</strong>&nbsp;<small>You are called or passionate about reaching people in the workplace. You see yourself more like someone sent into the workplace.</small>
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+            </div>
           </div>
           <button class="formbold-btn" type='submit'>{RegistrationText}</button>
         </form>

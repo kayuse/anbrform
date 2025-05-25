@@ -15,7 +15,7 @@ const SuccessPage = () => {
       <div className="bg-white p-8 rounded-lg shadow-lg text-center">
         <h1 className="text-2xl font-bold text-green-600 mb-4">Success!</h1>
         <p className="text-gray-700 mb-6">Your registration was successful. Your Registration Details are as follows</p>
-        <p>Please note your email might delay but it's going to arrive. </p>
+        <p>Please check your Phone Number for a SMS Notification </p>
         <strong> Registration ID : {registration_id}</strong>
         <br />
         <strong> Please if you have any challenges, please call +2348027320998</strong>
