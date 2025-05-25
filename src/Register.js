@@ -94,7 +94,10 @@ function Register() {
           <div class="formbold-form-title">
             <h2 class="">Register now</h2>
             <p>
-              Complete this form to Register for ANBR 2025
+              Complete this form to Register for ANBR 2025 <br />
+              <small>Note: <strong>There are hostels available for free for everyone
+                and we are also making provisions for moderately priced PAID accomodation
+                in guest houses and hotels (plus transportation arrangements to and fro the hotel)... More Information to be Communicated</strong> </small>
             </p>
           </div>
           <div>
@@ -657,9 +660,9 @@ function Register() {
                     onChange={handleChange}
                     id="qusOne"
                   />
-                 <strong> Ministry Class:</strong>&nbsp;<small>You are currently a pastor, fellowship president or vice president,
-                  ministry founders, top leaders in ministries,
-                  visioneers and those perceive God's call into full time ministry.</small>
+                  <strong> Ministry Class:</strong>&nbsp;<small>You are currently a pastor, fellowship president or vice president,
+                    ministry founders, top leaders in ministries,
+                    visioneers and those perceive God's call into full time ministry.</small>
                   <span class="formbold-radio-checkmark"></span>
                 </label>
               </div>
@@ -674,9 +677,9 @@ function Register() {
                     onChange={handleChange}
                     id="qusOne"
                   />
-                  <strong> Believers On A Mission Class:</strong>&nbsp;<small> 
-                  Perceiving God's call into the ministry or wants to clarify God's call for their lives or you just
-                   want to grow in your walk with God</small>
+                  <strong> Believers On A Mission Class:</strong>&nbsp;<small>
+                    Perceiving God's call into the ministry or wants to clarify God's call for their lives or you just
+                    want to grow in your walk with God</small>
 
                   <span class="formbold-radio-checkmark"></span>
                 </label>
@@ -692,8 +695,8 @@ function Register() {
                     onChange={handleChange}
                     id="qusOne"
                   />
-                  <strong>New Believers Maturity Class:</strong>&nbsp;<small>You just got born again in the last one to 
-                    two years and you haven't consciously undergone any serious discipleship class to 
+                  <strong>New Believers Maturity Class:</strong>&nbsp;<small>You just got born again in the last one to
+                    two years and you haven't consciously undergone any serious discipleship class to
                     ground you in the new life you received and you need</small>
 
                   <span class="formbold-radio-checkmark"></span>
@@ -711,7 +714,7 @@ function Register() {
                     id="qusOne"
                   />
                   <strong>Holy Ghost Baptism Class:</strong>&nbsp;<small>
-                    You are a believer but you are yet to be filled with the Holy 
+                    You are a believer but you are yet to be filled with the Holy
                     Spirit with evidence of speaking in tongues.</small>
 
                   <span class="formbold-radio-checkmark"></span>
@@ -729,14 +732,14 @@ function Register() {
                     id="qusOne"
                   />
                   <strong>Prayer, Healing and Deliverance Class:</strong>&nbsp;<small>
-                     You need a special prayer over a matter, or you need prayer for healing
-                      or there is a manifestation in your life that looks like demonic activities.</small>
+                    You need a special prayer over a matter, or you need prayer for healing
+                    or there is a manifestation in your life that looks like demonic activities.</small>
                   <span class="formbold-radio-checkmark"></span>
                 </label>
               </div>
             </div>
           </div>
-          <br/>
+          <br />
           <hr />
           <br />
           <div class="formbold-mb-5">
